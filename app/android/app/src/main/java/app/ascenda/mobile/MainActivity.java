@@ -1,4 +1,4 @@
-package app.peaker.mobile;
+package app.ascenda.mobile;
 
 import com.getcapacitor.BridgeActivity;
 

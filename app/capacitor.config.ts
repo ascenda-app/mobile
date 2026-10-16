@@ -1,8 +1,8 @@
 import type { CapacitorConfig } from "@capacitor/cli";
 
 const config: CapacitorConfig = {
-  appId: "app.peaker.mobile",
-  appName: "Peaker",
+  appId: "app.ascenda.mobile",
+  appName: "Ascenda",
   webDir: "dist",
   plugins: {
     CapacitorHttp: { enabled: true },

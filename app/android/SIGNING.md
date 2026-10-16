@@ -18,10 +18,10 @@ actualizar la aplicación en Google Play con la misma identidad.
 
 ```bash
 keytool -genkeypair -v \
-  -keystore peaker-release.jks \
-  -alias peaker \
+  -keystore ascenda-release.jks \
+  -alias ascenda \
   -keyalg RSA -keysize 4096 -validity 10000 \
-  -dname "CN=Peaker, O=Peaker, C=ES"
+  -dname "CN=Ascenda, O=Ascenda, C=ES"
 ```
 
 Guárdalo **fuera del repositorio**. Copia `keystore.properties.example` a `keystore.properties` y
@@ -38,9 +38,9 @@ apksigner verify --print-certs app/build/outputs/apk/release/app-release.apk
 
 | Secreto | Cómo se obtiene |
 |---|---|
-| `ANDROID_KEYSTORE_BASE64` | `base64 -w0 peaker-release.jks` |
+| `ANDROID_KEYSTORE_BASE64` | `base64 -w0 ascenda-release.jks` |
 | `ANDROID_KEYSTORE_PASSWORD` | La del `-storepass` |
-| `ANDROID_KEY_ALIAS` | `peaker` |
+| `ANDROID_KEY_ALIAS` | `ascenda` |
 | `ANDROID_KEY_PASSWORD` | La del `-keypass` |
 
 El workflow reconstruye el fichero en `$RUNNER_TEMP` y exporta `ANDROID_KEYSTORE_PATH`. Si el
@@ -57,7 +57,7 @@ no pueden divergir. `versionCode` sale de `ANDROID_VERSION_CODE`, que en CI es
 `assetlinks.json` necesita la huella SHA-256 **de este keystore**:
 
 ```bash
-keytool -list -v -keystore peaker-release.jks -alias peaker | grep "SHA256:"
+keytool -list -v -keystore ascenda-release.jks -alias ascenda | grep "SHA256:"
 ```
 
 Se copia con los dos puntos incluidos en `app/.well-known/assetlinks.json`. Hasta entonces el

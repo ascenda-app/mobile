@@ -21,8 +21,8 @@ Faltan dos cosas, y ninguna es código:
 
 1. **La huella SHA-256 del keystore de release**, que B7b genera. Hasta entonces el valor es un
    marcador que Android rechazará.
-2. **Que `peaker.es` sirva este fichero por HTTPS** en
-   `https://peaker.es/.well-known/assetlinks.json`. El dominio ya está decidido y es el valor de
+2. **Que `localhost` sirva este fichero por HTTPS** en
+   `http://localhost:3000/.well-known/assetlinks.json`. El dominio ya está decidido y es el valor de
    `app_links_host`, de `VITE_SITE_URL` y del valor por defecto de `lib/seo.ts`, pero mientras el
    ingress no lo publique `autoVerify` **falla**, y Android trata el enlace como un enlace web
    normal en vez de abrir la aplicación.
@@ -32,7 +32,7 @@ de ningún dominio:
 
 ```bash
 adb shell am start -a android.intent.action.VIEW \
-  -d "app.peaker.mobile://confirm-email?token=<token>"
+  -d "app.ascenda.mobile://confirm-email?token=<token>"
 ```
 
 ## Cómo se completa
@@ -45,8 +45,8 @@ Se copia la huella —los dos puntos incluidos— en `sha256_cert_fingerprints`,
 en el dominio con `Content-Type: application/json` y sin redirecciones, y se comprueba con:
 
 ```bash
-adb shell pm verify-app-links --re-verify app.peaker.mobile
-adb shell pm get-app-links app.peaker.mobile
+adb shell pm verify-app-links --re-verify app.ascenda.mobile
+adb shell pm get-app-links app.ascenda.mobile
 ```
 
 El estado tiene que decir `verified`. Si dice `legacy_failure` o `1024`, el fichero no se está
