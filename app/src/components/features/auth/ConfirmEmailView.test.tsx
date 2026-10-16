@@ -154,7 +154,7 @@ describe("ConfirmEmailView", () => {
   it("confirmEmailView_successWithSession_offersTheDashboard", async () => {
     sessionState.mockReturnValue({
       status: "authenticated",
-      session: { userId: "u-1", email: "ana@peaker.app" },
+      session: { userId: "u-1", email: "ana@example.com" },
     });
     stubFetch(confirmResponse(204));
     renderWithProviders(<ConfirmEmailView token="abc123" />);

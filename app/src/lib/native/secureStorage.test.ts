@@ -82,7 +82,7 @@ describe("secureStore", () => {
     }));
     const { secureStore } = await import("./secureStorage");
 
-    await secureStore.set("peaker.refreshToken", "must-not-persist");
+    await secureStore.set("ascenda.refreshToken", "must-not-persist");
 
     expect(localStorage.length).toBe(0);
   });
@@ -98,9 +98,9 @@ describe("secureStore", () => {
     }));
     const { secureStore } = await import("./secureStorage");
 
-    await secureStore.set("peaker.refreshToken", "abc");
+    await secureStore.set("ascenda.refreshToken", "abc");
 
-    expect(plugin.setItem).toHaveBeenCalledWith("peaker.refreshToken", "abc");
+    expect(plugin.setItem).toHaveBeenCalledWith("ascenda.refreshToken", "abc");
     expect(localStorage.length).toBe(0);
   });
 });

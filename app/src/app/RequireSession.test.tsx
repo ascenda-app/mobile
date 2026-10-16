@@ -41,7 +41,7 @@ describe("RequireSession", () => {
   it("requireSession_authenticated_rendersTheRoute", () => {
     sessionState.mockReturnValue({
       status: "authenticated",
-      session: { userId: "u-1", email: "ana@peaker.app" },
+      session: { userId: "u-1", email: "ana@example.com" },
     });
 
     renderGuard("/dashboard/ascents");

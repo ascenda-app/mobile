@@ -30,7 +30,7 @@ const renderGuard = (route: string) =>
 
 const authenticated: SessionState = {
   status: "authenticated",
-  session: { userId: "u-1", email: "ana@peaker.app" },
+  session: { userId: "u-1", email: "ana@example.com" },
 };
 
 afterEach(() => {

@@ -152,7 +152,7 @@ describe("apiFetch unauthorised handling", () => {
     const { client, tokenStore } = await loadAuth();
     const expired = jwt({
       sub: "u-1",
-      email: "ana@peaker.app",
+      email: "ana@example.com",
       exp: Math.floor(Date.now() / 1000) - 60,
     });
     await tokenStore.persistTokens(tokens({ accessToken: expired }));
@@ -175,7 +175,7 @@ describe("apiFetch unauthorised handling", () => {
     const { client, tokenStore } = await loadAuth();
     const expired = jwt({
       sub: "u-1",
-      email: "ana@peaker.app",
+      email: "ana@example.com",
       exp: Math.floor(Date.now() / 1000) - 60,
     });
     await tokenStore.persistTokens(tokens({ accessToken: expired }));

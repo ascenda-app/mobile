@@ -31,7 +31,7 @@ describe("tokenStore", () => {
 
     expect(sessionStore.getSessionState()).toEqual({
       status: "authenticated",
-      session: { userId: "u-1", email: "ana@peaker.app" },
+      session: { userId: "u-1", email: "ana@example.com" },
     });
   });
 

@@ -23,14 +23,14 @@ describe("extractConfirmationToken", () => {
   it("extractConfirmationToken_linkWithTrailingParams_stopsAtTheAmpersand", () => {
     expect(
       extractConfirmationToken(
-        `https://peaker.app/confirm-email?token=${token}&utm=email`,
+        `http://localhost:3000/confirm-email?token=${token}&utm=email`,
       ),
     ).toBe(token);
   });
 
   it("extractConfirmationToken_percentEncodedValue_isDecoded", () => {
     expect(
-      extractConfirmationToken("https://peaker.app/confirm-email?token=a%2Bb"),
+      extractConfirmationToken("http://localhost:3000/confirm-email?token=a%2Bb"),
     ).toBe("a+b");
   });
 

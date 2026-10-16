@@ -9,7 +9,7 @@ import {
   tokens,
 } from "@/test/authHarness";
 
-const credentials = { identifier: "ana@peaker.app", password: "secret" };
+const credentials = { identifier: "ana@example.com", password: "secret" };
 
 afterEach(() => {
   vi.unstubAllEnvs();
@@ -25,7 +25,7 @@ describe("signIn", () => {
 
     expect(sessionStore.getSessionState()).toEqual({
       status: "authenticated",
-      session: { userId: "u-1", email: "ana@peaker.app" },
+      session: { userId: "u-1", email: "ana@example.com" },
     });
     await expect(tokenStore.readRefreshToken()).resolves.toBe("refresh-1");
   });
@@ -136,7 +136,7 @@ describe("restoreSession", () => {
 
     await expect(session.restoreSession()).resolves.toEqual({
       status: "authenticated",
-      session: { userId: "u-1", email: "ana@peaker.app" },
+      session: { userId: "u-1", email: "ana@example.com" },
     });
   });
 

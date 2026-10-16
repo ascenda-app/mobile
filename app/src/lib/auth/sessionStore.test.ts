@@ -30,11 +30,11 @@ describe("sessionStore", () => {
   it("markAuthenticated_validToken_exposesTheClaims", async () => {
     const { getSessionState, markAuthenticated } = await load();
 
-    markAuthenticated(jwt({ sub: "u-1", email: "ana@peaker.app" }));
+    markAuthenticated(jwt({ sub: "u-1", email: "ana@example.com" }));
 
     expect(getSessionState()).toEqual({
       status: "authenticated",
-      session: { userId: "u-1", email: "ana@peaker.app" },
+      session: { userId: "u-1", email: "ana@example.com" },
     });
   });
 
@@ -48,7 +48,7 @@ describe("sessionStore", () => {
 
   it("markAnonymous_afterASession_clearsIt", async () => {
     const { getSessionState, markAnonymous, markAuthenticated } = await load();
-    markAuthenticated(jwt({ sub: "u-1", email: "ana@peaker.app" }));
+    markAuthenticated(jwt({ sub: "u-1", email: "ana@example.com" }));
 
     markAnonymous();
 
@@ -57,7 +57,7 @@ describe("sessionStore", () => {
 
   it("getSessionState_withoutChanges_keepsTheSameReference", async () => {
     const { getSessionState, markAuthenticated } = await load();
-    markAuthenticated(jwt({ sub: "u-1", email: "ana@peaker.app" }));
+    markAuthenticated(jwt({ sub: "u-1", email: "ana@example.com" }));
 
     expect(getSessionState()).toBe(getSessionState());
   });
@@ -78,11 +78,11 @@ describe("sessionStore", () => {
     expect(result.current.status).toBe("unknown");
 
     act(() => {
-      markAuthenticated(jwt({ sub: "u-7", email: "leo@peaker.app" }));
+      markAuthenticated(jwt({ sub: "u-7", email: "leo@example.com" }));
     });
     expect(result.current.session).toEqual({
       userId: "u-7",
-      email: "leo@peaker.app",
+      email: "leo@example.com",
     });
 
     act(() => {

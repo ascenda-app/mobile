@@ -15,7 +15,7 @@ export const jwt = (claims: Record<string, unknown>): string => {
 export const tokens = (
   overrides: Partial<AuthTokensResponse> = {},
 ): AuthTokensResponse => ({
-  accessToken: jwt({ sub: "u-1", email: "ana@peaker.app" }),
+  accessToken: jwt({ sub: "u-1", email: "ana@example.com" }),
   refreshToken: "refresh-1",
   expiresInSeconds: 900,
   tokenType: "Bearer",
