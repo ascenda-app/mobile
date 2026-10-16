@@ -51,7 +51,7 @@ afterEach(() => {
 
 describe("routeOf", () => {
   it("routeOf_appLink_keepsThePathAndDropsTheDomain", () => {
-    expect(routeOf("http://localhost:3000/confirm-email?token=abc")).toBe(
+    expect(routeOf("https://localhost:3000/confirm-email?token=abc")).toBe(
       "/confirm-email?token=abc",
     );
   });
@@ -69,13 +69,13 @@ describe("routeOf", () => {
   });
 
   it("routeOf_encodedToken_isLeftForTheRouterToDecode", () => {
-    expect(routeOf("http://localhost:3000/confirm-email?token=a%2Bb")).toBe(
+    expect(routeOf("https://localhost:3000/confirm-email?token=a%2Bb")).toBe(
       "/confirm-email?token=a%2Bb",
     );
   });
 
   it("routeOf_bareOrigin_hasNowhereToGo", () => {
-    expect(routeOf("http://localhost:3000/")).toBeUndefined();
+    expect(routeOf("https://localhost:3000/")).toBeUndefined();
     expect(routeOf("app.ascenda.mobile://")).toBeUndefined();
   });
 
