@@ -51,32 +51,32 @@ afterEach(() => {
 
 describe("routeOf", () => {
   it("routeOf_appLink_keepsThePathAndDropsTheDomain", () => {
-    expect(routeOf("https://peaker.app/confirm-email?token=abc")).toBe(
+    expect(routeOf("https://localhost:3000/confirm-email?token=abc")).toBe(
       "/confirm-email?token=abc",
     );
   });
 
   it("routeOf_customScheme_treatsTheHostAsTheFirstSegment", () => {
-    expect(routeOf("app.peaker.mobile://confirm-email?token=abc")).toBe(
+    expect(routeOf("app.ascenda.mobile://confirm-email?token=abc")).toBe(
       "/confirm-email?token=abc",
     );
   });
 
   it("routeOf_customSchemeWithPath_keepsBothSegments", () => {
-    expect(routeOf("app.peaker.mobile://confirm-email/pending")).toBe(
+    expect(routeOf("app.ascenda.mobile://confirm-email/pending")).toBe(
       "/confirm-email/pending",
     );
   });
 
   it("routeOf_encodedToken_isLeftForTheRouterToDecode", () => {
-    expect(routeOf("https://peaker.app/confirm-email?token=a%2Bb")).toBe(
+    expect(routeOf("https://localhost:3000/confirm-email?token=a%2Bb")).toBe(
       "/confirm-email?token=a%2Bb",
     );
   });
 
   it("routeOf_bareOrigin_hasNowhereToGo", () => {
-    expect(routeOf("https://peaker.app/")).toBeUndefined();
-    expect(routeOf("app.peaker.mobile://")).toBeUndefined();
+    expect(routeOf("https://localhost:3000/")).toBeUndefined();
+    expect(routeOf("app.ascenda.mobile://")).toBeUndefined();
   });
 
   it("routeOf_garbage_isIgnoredInsteadOfThrowing", () => {
@@ -107,7 +107,7 @@ describe("useAppUrlOpen", () => {
     addListener.mockResolvedValue({ remove });
     mountProbe();
 
-    openedWith("app.peaker.mobile://confirm-email?token=abc");
+    openedWith("app.ascenda.mobile://confirm-email?token=abc");
 
     expect(navigate).toHaveBeenCalledWith("/confirm-email?token=abc");
   });
@@ -117,7 +117,7 @@ describe("useAppUrlOpen", () => {
     addListener.mockResolvedValue({ remove });
     mountProbe();
 
-    openedWith("app.peaker.mobile://");
+    openedWith("app.ascenda.mobile://");
 
     expect(navigate).not.toHaveBeenCalled();
   });

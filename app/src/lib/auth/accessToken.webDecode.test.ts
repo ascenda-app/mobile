@@ -16,15 +16,15 @@ const encode = (claims: Record<string, unknown>): string =>
 
 describe("decodeAccessToken without Buffer", () => {
   it("decodeAccessToken_nonAsciiEmail_keepsTheAccents", () => {
-    const token = encode({ sub: "u-1", email: "montañero@peaker.app" });
+    const token = encode({ sub: "u-1", email: "montañero@example.com" });
 
-    expect(decodeAccessToken(token)?.email).toBe("montañero@peaker.app");
+    expect(decodeAccessToken(token)?.email).toBe("montañero@example.com");
   });
 
   it("decodeAccessToken_multibyteClaims_areNotCorrupted", () => {
-    const token = encode({ sub: "u-2", email: "珠穆朗玛@peaker.app" });
+    const token = encode({ sub: "u-2", email: "珠穆朗玛@example.com" });
 
-    expect(decodeAccessToken(token)?.email).toBe("珠穆朗玛@peaker.app");
+    expect(decodeAccessToken(token)?.email).toBe("珠穆朗玛@example.com");
   });
 
   it("decodeAccessToken_payloadWithoutPadding_isAccepted", () => {
@@ -36,7 +36,7 @@ describe("decodeAccessToken without Buffer", () => {
   });
 
   it("decodeAccessToken_base64UrlAlphabet_isNormalised", () => {
-    const token = encode({ sub: "u-4?>", email: "sub~with?chars@peaker.app" });
+    const token = encode({ sub: "u-4?>", email: "sub~with?chars@example.com" });
 
     expect(decodeAccessToken(token)?.userId).toBe("u-4?>");
   });

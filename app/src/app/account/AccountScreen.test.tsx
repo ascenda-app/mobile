@@ -8,7 +8,7 @@ import type { ProfileResponse } from "@/types/api";
 
 const authenticated: SessionState = {
   status: "authenticated",
-  session: { userId: "u-1", email: "ana@peaker.app" },
+  session: { userId: "u-1", email: "ana@example.com" },
 };
 
 const setLocale = vi.fn();
@@ -58,7 +58,7 @@ describe("AccountScreen", () => {
   it("accountScreen_authenticated_showsTheAddressLeftToRight", async () => {
     renderWithProviders(<AccountScreen />);
 
-    expect(await screen.findByText("ana@peaker.app")).toHaveAttribute(
+    expect(await screen.findByText("ana@example.com")).toHaveAttribute(
       "dir",
       "ltr",
     );
@@ -94,7 +94,7 @@ describe("AccountScreen", () => {
     const user = userEvent.setup({ pointerEventsCheck: 0 });
     renderWithProviders(<AccountScreen />);
 
-    await screen.findByText("ana@peaker.app");
+    await screen.findByText("ana@example.com");
     await user.click(screen.getByRole("button", { name: "Close my account" }));
 
     const dialog = await screen.findByRole("alertdialog");

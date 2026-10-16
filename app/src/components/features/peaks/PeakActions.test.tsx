@@ -16,7 +16,7 @@ const peakId = "11111111-1111-1111-1111-111111111111";
 const anonymous: SessionState = { status: "anonymous", session: undefined };
 const authenticated: SessionState = {
   status: "authenticated",
-  session: { userId: "u-1", email: "ana@peaker.app" },
+  session: { userId: "u-1", email: "ana@example.com" },
 };
 
 afterEach(() => {

@@ -1,5 +1,5 @@
 {
-  "portalRoot": "../../peaker-web/portal",
+  "portalRoot": "../../web/portal",
   "notes": {
     "src/lib/api/endpoints.ts": "allowedGatewayPrefixes e isAllowedGatewayPath eran la allowlist del BFF y en movil no se usan. Se conservan para no divergir del origen.",
     "src/components/forms": "Los tests de forms/ son propios de movil: el portal no los tiene, asi que no se vendorizan.",
@@ -338,7 +338,7 @@
     },
     {
       "path": "src/components/features/peaks/PeakMap.tsx",
-      "divergence": "Dos cosas: el consentimiento del mapa no viene de la cookie peaker_cc sino de usePreferences.mapsConsent sobre @capacitor/preferences, porque una app instalada no tiene cookies ni banner; y hoy ninguna pantalla llama a setMapsConsent, asi que el mapa solo se abria con el boton de una vez. Irrelevante mientras VITE_MAP_ENABLED sea false (blockers.md §B5). El gate y su copia son identicos al portal.",
+      "divergence": "Dos cosas: el consentimiento del mapa no viene de la cookie ascenda_cc sino de usePreferences.mapsConsent sobre @capacitor/preferences, porque una app instalada no tiene cookies ni banner; y hoy ninguna pantalla llama a setMapsConsent, asi que el mapa solo se abria con el boton de una vez. Irrelevante mientras VITE_MAP_ENABLED sea false (blockers.md §B5). El gate y su copia son identicos al portal.",
       "sourceSha256": "fa14481446418f99acee92a42aaca25dcb09cedb5add7351569842f752032677"
     },
     {

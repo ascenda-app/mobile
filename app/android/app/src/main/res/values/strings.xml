@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-    <string name="app_name">Peaker</string>
-    <string name="title_activity_main">Peaker</string>
-    <string name="package_name">app.peaker.mobile</string>
-    <string name="custom_url_scheme">app.peaker.mobile</string>
-    <string name="app_links_host">peaker.es</string>
+    <string name="app_name">Ascenda</string>
+    <string name="title_activity_main">Ascenda</string>
+    <string name="package_name">app.ascenda.mobile</string>
+    <string name="custom_url_scheme">app.ascenda.mobile</string>
+    <string name="app_links_host">localhost</string>
 </resources>

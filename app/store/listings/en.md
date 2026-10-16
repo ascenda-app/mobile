@@ -1,6 +1,6 @@
 ## name
 
-Peaker
+Ascenda
 
 ## subtitle
 
@@ -20,7 +20,7 @@ mountain,peak,summit,hiking,climbing,ascent,alpinism,logbook,gps,outdoor
 
 ## description
 
-Peaker is a logbook for people who climb mountains.
+Ascenda is a logbook for people who climb mountains.
 
 FIND THE MOUNTAIN
 Search a worldwide catalogue by name, in any language, and narrow it down by country, region or altitude. Or let the app use your location to list the summits closest to you, with the distance to each one.
@@ -42,4 +42,4 @@ English, Spanish, French, Chinese and Arabic, with full right-to-left support.
 
 ## privacyPolicyUrl
 
-https://peaker.es/en/legal/privacy
+http://localhost:3000/en/legal/privacy

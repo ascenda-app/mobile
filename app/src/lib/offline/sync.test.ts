@@ -202,7 +202,7 @@ describe("syncQueuedAscents", () => {
   it("sync_entryWithStoredPhotos_uploadsThemWithTheAscent", async () => {
     submitAscent.mockResolvedValue({ ascentId: "server-id", failedPhotos: 0 });
     queueWithPhotos("key-1", [
-      { path: "peaker-offline-key-1-0", name: "a.jpg", type: "image/jpeg" },
+      { path: "ascenda-offline-key-1-0", name: "a.jpg", type: "image/jpeg" },
     ]);
 
     await syncQueuedAscents();
@@ -218,20 +218,20 @@ describe("syncQueuedAscents", () => {
   it("sync_successfulReplay_deletesThePhotosFromDisk", async () => {
     submitAscent.mockResolvedValue({ ascentId: "server-id", failedPhotos: 0 });
     queueWithPhotos("key-1", [
-      { path: "peaker-offline-key-1-0", name: "a.jpg", type: "image/jpeg" },
+      { path: "ascenda-offline-key-1-0", name: "a.jpg", type: "image/jpeg" },
     ]);
 
     await syncQueuedAscents();
 
     expect(deleteFile).toHaveBeenCalledWith(
-      expect.objectContaining({ path: "peaker-offline-key-1-0" }),
+      expect.objectContaining({ path: "ascenda-offline-key-1-0" }),
     );
   });
 
   it("sync_stillOffline_keepsThePhotosOnDisk", async () => {
     submitAscent.mockRejectedValue(new TypeError("Failed to fetch"));
     queueWithPhotos("key-1", [
-      { path: "peaker-offline-key-1-0", name: "a.jpg", type: "image/jpeg" },
+      { path: "ascenda-offline-key-1-0", name: "a.jpg", type: "image/jpeg" },
     ]);
 
     await syncQueuedAscents();

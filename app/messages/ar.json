@@ -1,7 +1,7 @@
 {
   "common": {
     "skipToContent": "الانتقال إلى المحتوى",
-    "brand": "Peaker",
+    "brand": "Ascenda",
     "locale": {
       "label": "اللغة",
       "en": "English",
@@ -124,7 +124,7 @@
       "nearbyCta": "عرض القمم القريبة مني"
     },
     "valueProps": {
-      "heading": "لماذا Peaker",
+      "heading": "لماذا Ascenda",
       "searchTitle": "دليل عالمي",
       "searchBody": "اعثر على القمة بأي من أسمائها: Matterhorn وCervino يقودان إلى الجبل نفسه.",
       "logTitle": "صعوداتك محفوظة كما ينبغي",
@@ -144,7 +144,7 @@
     },
     "farewell": {
       "title": "تم إغلاق حسابك",
-      "body": "شكرًا لاستخدامك Peaker. يجري الآن حذف ملفك الشخصي وصعوداتك وصورك."
+      "body": "شكرًا لاستخدامك Ascenda. يجري الآن حذف ملفك الشخصي وصعوداتك وصورك."
     }
   },
   "peaks": {
@@ -249,7 +249,7 @@
   },
   "profile": {
     "public": {
-      "metaDescription": "الصعودات العامة لـ {name} على Peaker.",
+      "metaDescription": "الصعودات العامة لـ {name} على Ascenda.",
       "ascentsHeading": "الصعودات العامة",
       "empty": "ليس لدى هذا المتسلق صعودات عامة بعد.",
       "ascentsUnavailable": "تعذّر تحميل الصعودات في الوقت الحالي."

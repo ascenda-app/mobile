@@ -150,8 +150,8 @@ describe("QueuedAscentDetail", () => {
       <QueuedAscentDetail
         entry={entry({
           photos: [
-            { path: "peaker-offline-key-1-0", name: "a.jpg", type: "image/jpeg" },
-            { path: "peaker-offline-key-1-1", name: "b.jpg", type: "image/jpeg" },
+            { path: "ascenda-offline-key-1-0", name: "a.jpg", type: "image/jpeg" },
+            { path: "ascenda-offline-key-1-1", name: "b.jpg", type: "image/jpeg" },
           ],
         })}
       />,
@@ -167,7 +167,7 @@ describe("QueuedAscentDetail", () => {
     enqueueAscent(
       entry({
         photos: [
-          { path: "peaker-offline-key-1-0", name: "a.jpg", type: "image/jpeg" },
+          { path: "ascenda-offline-key-1-0", name: "a.jpg", type: "image/jpeg" },
         ],
       }),
     );

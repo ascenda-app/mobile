@@ -14,7 +14,7 @@ export interface SavedPhotos {
 
 const directory = Directory.Data;
 
-const prefix = "peaker-offline";
+const prefix = "ascenda-offline";
 
 const pathOf = (clientAscentId: string, index: number): string =>
   `${prefix}-${clientAscentId}-${index}`;

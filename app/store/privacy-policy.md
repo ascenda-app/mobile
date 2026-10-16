@@ -1,4 +1,4 @@
-# Política de privacidad de Peaker
+# Política de privacidad de Ascenda
 
 > **Borrador.** Describe con fidelidad lo que la aplicación hace hoy, deducido del código, no lo que
 > se querría que hiciera. Antes de publicarla faltan tres cosas que no son técnicas: **revisión
@@ -72,4 +72,4 @@ datos. Para cualquier otra petición, la dirección de contacto irá aquí cuand
 
 ## 7. Menores
 
-Peaker no está dirigida a menores de 13 años y no recoge datos de forma consciente sobre ellos.
+Ascenda no está dirigida a menores de 13 años y no recoge datos de forma consciente sobre ellos.

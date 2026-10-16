@@ -9,7 +9,7 @@ interface PreferencesState {
   setMapsConsent: (allowed: boolean) => void;
 }
 
-export const preferencesKey = "peaker-preferences";
+export const preferencesKey = "ascenda-preferences";
 
 export const usePreferences = createPersistedStore<PreferencesState>(
   preferencesKey,

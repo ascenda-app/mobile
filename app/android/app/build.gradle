@@ -18,10 +18,10 @@ def appVersion = new groovy.json.JsonSlurper()
         .parseText(file('../../package.json').text).version
 
 android {
-    namespace = "app.peaker.mobile"
+    namespace = "app.ascenda.mobile"
     compileSdk = rootProject.ext.compileSdkVersion
     defaultConfig {
-        applicationId "app.peaker.mobile"
+        applicationId "app.ascenda.mobile"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode Integer.parseInt(System.getenv('ANDROID_VERSION_CODE') ?: '1')

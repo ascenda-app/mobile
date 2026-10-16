@@ -146,7 +146,7 @@ describe("PublicAscentScreen", () => {
   });
 
   it("publicAscentScreen_visitor_getsNoEditAction", async () => {
-    markAuthenticated(jwt({ sub: "someone-else", email: "other@peaker.app" }));
+    markAuthenticated(jwt({ sub: "someone-else", email: "other@example.com" }));
 
     renderWithProviders(<PublicAscentScreen />, { route: "/ascents/a-1" });
 
@@ -155,7 +155,7 @@ describe("PublicAscentScreen", () => {
   });
 
   it("publicAscentScreen_owner_getsTheEditAction", async () => {
-    markAuthenticated(jwt({ sub: "u-1", email: "ana@peaker.app" }));
+    markAuthenticated(jwt({ sub: "u-1", email: "ana@example.com" }));
 
     renderWithProviders(<PublicAscentScreen />, { route: "/ascents/a-1" });
 

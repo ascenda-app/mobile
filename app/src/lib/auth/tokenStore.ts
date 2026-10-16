@@ -2,7 +2,7 @@ import { secureStore } from "@/lib/native/secureStorage";
 import type { AuthTokensResponse } from "@/types/api";
 import { markAnonymous, markAuthenticated } from "./sessionStore";
 
-export const refreshTokenKey = "peaker.refreshToken";
+export const refreshTokenKey = "ascenda.refreshToken";
 
 let accessToken: string | undefined;
 

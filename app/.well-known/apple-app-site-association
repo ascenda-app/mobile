@@ -2,7 +2,7 @@
   "applinks": {
     "details": [
       {
-        "appIDs": ["PENDIENTE-B7B-TEAM-ID.app.peaker.mobile"],
+        "appIDs": ["PENDIENTE-B7B-TEAM-ID.app.ascenda.mobile"],
         "components": [
           {
             "/": "/confirm-email*",

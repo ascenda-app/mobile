@@ -1,6 +1,6 @@
 ## name
 
-Peaker
+Ascenda
 
 ## subtitle
 
@@ -20,7 +20,7 @@ montaña,cumbre,pico,montañismo,alpinismo,ascensión,senderismo,cuaderno,gps,ai
 
 ## description
 
-Peaker es un cuaderno de cumbres para quien sube montañas.
+Ascenda es un cuaderno de cumbres para quien sube montañas.
 
 ENCUENTRA LA MONTAÑA
 Busca en un catálogo mundial por nombre, en cualquier idioma, y afina por país, región o altitud. O deja que la aplicación use tu ubicación para listar las cumbres más cercanas, con la distancia a cada una.
@@ -42,4 +42,4 @@ Español, inglés, francés, chino y árabe, con soporte completo de derecha a i
 
 ## privacyPolicyUrl
 
-https://peaker.es/es/legal/privacy
+http://localhost:3000/es/legal/privacy

@@ -37,8 +37,8 @@ describe("savePhotos", () => {
     ]);
 
     expect(stored.map((photo) => photo.path)).toEqual([
-      "peaker-offline-key-1-0",
-      "peaker-offline-key-1-1",
+      "ascenda-offline-key-1-0",
+      "ascenda-offline-key-1-1",
     ]);
     expect(dropped).toBe(0);
   });
@@ -78,7 +78,7 @@ describe("savePhotos", () => {
 describe("readPhotos", () => {
   it("readPhotos_storedPhoto_rebuildsAFileWithItsNameAndType", async () => {
     const [photo] = await readPhotos([
-      { path: "peaker-offline-key-1-0", name: "cumbre.jpg", type: "image/jpeg" },
+      { path: "ascenda-offline-key-1-0", name: "cumbre.jpg", type: "image/jpeg" },
     ]);
 
     expect(photo?.file.name).toBe("cumbre.jpg");
@@ -88,7 +88,7 @@ describe("readPhotos", () => {
 
   it("readPhotos_storedPhoto_givesItAFreshPreviewUrl", async () => {
     const [photo] = await readPhotos([
-      { path: "peaker-offline-key-1-0", name: "a.jpg", type: "image/jpeg" },
+      { path: "ascenda-offline-key-1-0", name: "a.jpg", type: "image/jpeg" },
     ]);
 
     expect(photo?.previewUrl).toMatch(/^blob:/);

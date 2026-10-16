@@ -25,7 +25,7 @@ interface OfflineQueueState {
   entries: QueuedAscent[];
 }
 
-export const offlineQueueKey = "peaker-offline-ascents";
+export const offlineQueueKey = "ascenda-offline-ascents";
 
 export const useOfflineQueue = createPersistedStore<OfflineQueueState>(
   offlineQueueKey,
