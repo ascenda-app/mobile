@@ -83,7 +83,7 @@ for (const finding of findings) {
 }
 
 console.error(
-  "\nDefine esas variables en peaker-mobile/app/.env y sustituye el dominio en\n" +
+  "\nDefine esas variables en mobile/app/.env y sustituye el dominio en\n" +
     "store/listings/. El detalle está en .claude/docs/LEGAL.md.",
 );
 

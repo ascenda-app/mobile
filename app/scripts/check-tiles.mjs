@@ -106,7 +106,7 @@ for (const finding of findings) {
 }
 
 console.error(
-  "\nDefine esas variables en peaker-mobile/app/.env, o desactiva el mapa con\n" +
+  "\nDefine esas variables en mobile/app/.env, o desactiva el mapa con\n" +
     "VITE_MAP_ENABLED=false. El porqué está en .claude/deploy/blockers.md §B5.",
 );
 

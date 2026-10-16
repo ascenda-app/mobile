@@ -6,7 +6,7 @@ interface EmailConfirmationState {
   clear: () => void;
 }
 
-export const emailConfirmationKey = "peaker-email-confirmation";
+export const emailConfirmationKey = "ascenda-email-confirmation";
 
 export const useEmailConfirmation =
   createPersistedStore<EmailConfirmationState>(emailConfirmationKey, {
