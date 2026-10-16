@@ -1,6 +1,6 @@
 ## name
 
-Peaker 峰记
+Ascenda 峰记
 
 ## subtitle
 
@@ -20,7 +20,7 @@ Peaker 峰记
 
 ## description
 
-Peaker 是为登山者准备的登顶日志。
+Ascenda 是为登山者准备的登顶日志。
 
 找到那座山
 在全球山峰目录中按名称搜索，支持任意语言，并可按国家、地区或海拔筛选。也可以让应用使用你的位置，列出离你最近的山峰，并显示各自的距离。
@@ -42,4 +42,4 @@ Peaker 是为登山者准备的登顶日志。
 
 ## privacyPolicyUrl
 
-https://peaker.es/zh/legal/privacy
+http://localhost:3000/zh/legal/privacy

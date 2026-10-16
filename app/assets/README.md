@@ -1,13 +1,13 @@
 # Arte fuente de la marca
 
-`logo.png` es el **origen del icono de la aplicación**: la insignia circular de Peaker, 2816×1536
+`logo.png` es el **origen del icono de la aplicación**: la insignia circular de Ascenda, 2816×1536
 con el círculo centrado sobre fondo transparente. El mismo fichero vive en
-`peaker-web/portal/src/app/assets/logo.png`, que es de donde lo lee el generador.
+`web/portal/src/app/assets/logo.png`, que es de donde lo lee el generador.
 
 ## Los iconos se generan, no se editan a mano
 
 ```bash
-cd ../../peaker-web/portal && npm run icons
+cd ../../web/portal && npm run icons
 ```
 
 `scripts/generate-icons.mjs` localiza el círculo por su caja de píxeles opacos —así el recorte

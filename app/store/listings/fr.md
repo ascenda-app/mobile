@@ -1,6 +1,6 @@
 ## name
 
-Peaker
+Ascenda
 
 ## subtitle
 
@@ -20,7 +20,7 @@ montagne,sommet,pic,randonnée,alpinisme,ascension,escalade,carnet,gps,plein air
 
 ## description
 
-Peaker est un carnet de sommets pour celles et ceux qui montent en montagne.
+Ascenda est un carnet de sommets pour celles et ceux qui montent en montagne.
 
 TROUVEZ LA MONTAGNE
 Cherchez dans un catalogue mondial par nom, dans n'importe quelle langue, puis affinez par pays, région ou altitude. Ou laissez l'application utiliser votre position pour lister les sommets les plus proches, avec la distance à chacun.
@@ -42,4 +42,4 @@ Français, anglais, espagnol, chinois et arabe, avec prise en charge complète d
 
 ## privacyPolicyUrl
 
-https://peaker.es/fr/legal/privacy
+http://localhost:3000/fr/legal/privacy

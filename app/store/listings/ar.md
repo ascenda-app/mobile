@@ -1,6 +1,6 @@
 ## name
 
-Peaker
+Ascenda
 
 ## subtitle
 
@@ -20,7 +20,7 @@ Peaker
 
 ## description
 
-‏Peaker دفتر قمم لمن يصعد الجبال.
+‏Ascenda دفتر قمم لمن يصعد الجبال.
 
 اعثر على الجبل
 ابحث في دليل عالمي بالاسم، بأي لغة، ثم صفِّ النتائج حسب البلد أو المنطقة أو الارتفاع. أو دع التطبيق يستخدم موقعك ليعرض أقرب القمم إليك، مع المسافة إلى كل واحدة.
@@ -42,4 +42,4 @@ Peaker
 
 ## privacyPolicyUrl
 
-https://peaker.es/ar/legal/privacy
+http://localhost:3000/ar/legal/privacy
