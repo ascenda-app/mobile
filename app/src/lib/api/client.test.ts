@@ -85,6 +85,30 @@ describe("apiFetch", () => {
     await expect(client.apiFetch("ascents/1")).resolves.toBeUndefined();
   });
 
+  it("apiFetch_acceptedWithNoBody_resolvesToUndefined", async () => {
+    const { client } = await loadAuth();
+    vi.spyOn(globalThis, "fetch").mockResolvedValue(emptyResponse(202));
+
+    await expect(
+      client.apiFetch("auth/register", { method: "POST" }),
+    ).resolves.toBeUndefined();
+  });
+
+  it("apiFetch_okWithANonJsonBody_failsLoudlyInsteadOfHidingIt", async () => {
+    const { client } = await loadAuth();
+    vi.spyOn(globalThis, "fetch").mockResolvedValue(
+      new Response("<html>proxy</html>", { status: 200 }),
+    );
+
+    await expect(client.apiFetch("peaks")).rejects.toMatchObject({
+      name: "ApiError",
+      problem: {
+        status: 200,
+        title: "Respuesta inesperada del servidor",
+      },
+    });
+  });
+
   it("apiFetch_problemResponse_throwsApiErrorWithTheProblem", async () => {
     const { client } = await loadAuth();
     vi.spyOn(globalThis, "fetch").mockResolvedValue(
