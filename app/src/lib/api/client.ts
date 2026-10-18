@@ -60,14 +60,36 @@ const sendWithAuth = async (
     : first;
 };
 
+const readSuccessBody = async <T>(response: Response): Promise<T> => {
+  if (response.status === 204 || response.status === 205) {
+    return undefined as T;
+  }
+
+  const body = await response.text();
+
+  // 200/202 sin cuerpo es una respuesta de éxito legítima: no hay nada que
+  // deserializar y el contrato del endpoint no devuelve representación.
+  if (body.trim() === "") {
+    return undefined as T;
+  }
+
+  try {
+    return JSON.parse(body) as T;
+  } catch {
+    throw new ApiError({
+      status: response.status,
+      title: "Respuesta inesperada del servidor",
+      detail: `Se esperaba un cuerpo JSON y se recibió: ${body.slice(0, 80)}`,
+    });
+  }
+};
+
 const unwrap = async <T>(response: Response): Promise<T> => {
   if (!response.ok) {
     throw new ApiError(await readProblem(response));
   }
 
-  return response.status === 204
-    ? (undefined as T)
-    : ((await response.json()) as T);
+  return readSuccessBody<T>(response);
 };
 
 export const apiFetch = async <T>(
