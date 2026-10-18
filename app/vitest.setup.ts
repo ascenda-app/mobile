@@ -1,8 +1,12 @@
 import "@testing-library/jest-dom/vitest";
 import { cleanup } from "@testing-library/react";
-import { afterEach, vi } from "vitest";
+import { afterEach, beforeEach, vi } from "vitest";
 
-vi.stubEnv("VITE_GATEWAY_URL", "http://localhost:8080");
+// El gateway es parte de la configuración base: se re-aplica en cada test para que
+// un `vi.unstubAllEnvs()` en un fichero no deje sin URL a los tests siguientes.
+beforeEach(() => {
+  vi.stubEnv("VITE_GATEWAY_URL", "http://localhost:8080");
+});
 
 globalThis.ResizeObserver ??= class {
   observe() {}

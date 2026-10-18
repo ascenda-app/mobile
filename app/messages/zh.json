@@ -770,6 +770,11 @@
         "units": "单位",
         "metric": "米"
       },
+      "privacy": {
+        "heading": "隐私",
+        "body": "在这里管理与你账户关联的个人数据。",
+        "download": "下载我的数据"
+      },
       "danger": {
         "heading": "危险操作",
         "body": "注销账户会删除你记录的全部内容。",

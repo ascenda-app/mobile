@@ -770,6 +770,11 @@
         "units": "Unités",
         "metric": "Mètres"
       },
+      "privacy": {
+        "heading": "Confidentialité",
+        "body": "C'est ici que vous gérez les données personnelles liées à votre compte.",
+        "download": "Télécharger mes données"
+      },
       "danger": {
         "heading": "Zone de danger",
         "body": "Clôturer votre compte supprime tout ce que vous avez consigné.",
