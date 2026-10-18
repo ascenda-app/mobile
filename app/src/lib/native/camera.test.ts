@@ -28,12 +28,15 @@ const nativeCamera = (
   ...overrides,
 });
 
+// jsdom expone su propio Blob, sin stream(); undici (Response) exige un cuerpo con
+// stream(). Se construye la respuesta con un cuerpo de texto y el content-type explícito.
+const imageResponse = () =>
+  new Response("binary", { headers: { "Content-Type": "image/jpeg" } });
+
 const fetchMock = vi.spyOn(globalThis, "fetch");
 
 beforeEach(() => {
-  fetchMock.mockResolvedValue(
-    new Response(new Blob(["binary"], { type: "image/jpeg" })),
-  );
+  fetchMock.mockResolvedValue(imageResponse());
 });
 
 afterEach(() => {
@@ -119,7 +122,7 @@ describe("createNativePicker", () => {
   });
 
   it("nativePicker_missingFormat_fallsBackToJpeg", async () => {
-    fetchMock.mockResolvedValue(new Response(new Blob(["binary"])));
+    fetchMock.mockResolvedValue(new Response("binary"));
     const plugin = nativeCamera({
       takePhoto: vi.fn().mockResolvedValue({ webPath }),
     });

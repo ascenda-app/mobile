@@ -770,6 +770,11 @@
         "units": "Units",
         "metric": "Metres"
       },
+      "privacy": {
+        "heading": "Privacy",
+        "body": "This is where you manage the personal data linked to your account.",
+        "download": "Download my data"
+      },
       "danger": {
         "heading": "Danger zone",
         "body": "Closing your account deletes everything you've logged.",
